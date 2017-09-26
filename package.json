@@ -1,0 +1,19 @@
+{
+  "name": "plakapp-firebase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/btrflys-dev-team/plakapp-firebase.git"
+  },
+  "author": "Akın Özgen <akinozgen17@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/btrflys-dev-team/plakapp-firebase/issues"
+  },
+  "homepage": "https://github.com/btrflys-dev-team/plakapp-firebase#readme"
+}
