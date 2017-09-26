@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/btrflys-dev-team/plakapp-firebase/issues"
   },
-  "homepage": "https://github.com/btrflys-dev-team/plakapp-firebase#readme"
+  "homepage": "https://github.com/btrflys-dev-team/plakapp-firebase#readme",
+  "dependencies": {
+    "firebase-admin": "^5.2.1"
+  }
 }
