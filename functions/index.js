@@ -35,7 +35,7 @@ exports.updateRatingAverageOnWrite = functions
 exports.sendNotificationToFollowers = functions
     .database
     .ref('/comments/{commentId}')
-    .onWrite(event => {
+    .onCreate(event => {
 
         const { commentId } = event.params;
         event = event.data.toJSON();
