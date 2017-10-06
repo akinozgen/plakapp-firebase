@@ -8,9 +8,12 @@ exports.sendNotificationToFollowers = functions
     .ref('/comments/{commentId}')
     .onCreate(event => {
 
+        if (event.eventType != 'providers/google.firebase.database/eventTypes/ref.create') return;
+
         const { commentId } = event.params;
         event = event.data.toJSON();
         const plateId = event.plate;
+        const realOwner = event.realOwner;
 
         admin
             .database()
@@ -20,13 +23,11 @@ exports.sendNotificationToFollowers = functions
 
                 if (snaps.follows == null) return;
 
-                console.log('PLATE DATA', snaps);
 
                 Object.keys(snaps.follows).map(snap => {
                     uid = snaps.follows[snap];
 
-                    console.log('USER ID', uid);
-                    console.log('SNAP', snap);
+                    if (uid === realOwner) return;
 
                     admin
                         .database()
