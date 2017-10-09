@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/btrflys-dev-team/plakapp-firebase#readme",
   "dependencies": {
-    "firebase-admin": "^5.2.1"
+    "firebase-admin": "^5.2.1",
+    "request": "^2.83.0"
   }
 }
